@@ -10,7 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Android_singlebungle">
         <activity
+            android:name=".SettingProfileActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DairyUploadActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SettingActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

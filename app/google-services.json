@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "666476142247",
+    "project_id": "animal-project-cda23",
+    "storage_bucket": "animal-project-cda23.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:666476142247:android:a367618ea8014a61e3c582",
+        "android_client_info": {
+          "package_name": "com.study.android_singlebungle"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "666476142247-21a7umcr19ct685ufrr2uqkprkd95bn3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB---dO35fvSseWY5rHveXVOJV0BWSka8E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "666476142247-21a7umcr19ct685ufrr2uqkprkd95bn3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
