@@ -1,0 +1,61 @@
+<h1>단일 파일 업로드 테스트(사용자)</h1>
+<form action="/uploadFileWithOriginalFilename" method="post" enctype="multipart/form-data">
+  아이디 <input type="text" name="userId" id="userId"><br>
+  비밀번호 <input type="text" name="userPw" id="userPw"><br>
+  이름 <input type="text" name="userName" id="userName"><br>
+  성별 남자 <input type="radio" name="userGender" id="" value="남자"> 여자 <input type="radio" name="userGender" id="" value="여자"><br>
+  닉네임 <input type="text" name="userNick" id="userNick"><br>
+  프로필 사진 <input type="file" name="attachment"><br>
+  <button type="submit">업로드</button>
+</form>
+<br>
+
+<h1>다중 파일 업로드 테스트(사용자)</h1>
+<form action="/uploadFilesWithOriginalFilename" method="post" enctype="multipart/form-data">
+  아이디 <input type="text" name="userId" id="userId"><br>
+  비밀번호 <input type="text" name="userPw" id="userPw"><br>
+  이름 <input type="text" name="userName" id="userName"><br>
+  성별 남자 <input type="radio" name="userGender" id="" value="남자"> 여자 <input type="radio" name="userGender" id="" value="여자"><br>
+  닉네임 <input type="text" name="userNick" id="userNick"><br>
+  프로필 사진 <input type="file" name="attachments" multiple><br>
+  <button type="submit">업로드</button>
+</form>
+<br>
+
+<h1>단일 파일 업로드 테스트(반려견)</h1>
+<form action="/uploadFileWithOriginalFilename" method="post" enctype="multipart/form-data">
+  이름 <input type="text" name="doggyName" id="doggyName"><br>
+  성별 수컷 <input type="radio" name="doggyGender" id="" value="수컷"> 암컷 <input type="radio" name="doggyGender" id="" value="암컷"><br>
+  생일 1
+  <select name="" id="">
+    <option value="">1990</option>
+    <option value="">1991</option>
+    <option value="">1992</option>
+    <option value="">1993</option>
+  </select> 년
+  <select name="" id="">
+    <option value="">1</option>
+    <option value="">2</option>
+    <option value="">3</option>
+    <option value="">4</option>
+  </select> 월
+  <select name="" id="">
+    <option value="">1</option>
+    <option value="">2</option>
+    <option value="">3</option>
+    <option value="">4</option>
+  </select> 일<br>
+  생일 2 <input type="date" name="" id=""><br>
+  품종 
+  크기 
+  일기장 공개 여부 공개 <input type="radio" name="" id=""> 비공개 <input type="radio" name="" id="">
+  <input type="file" name="attachment"><br>
+  <button type="submit">업로드</button>
+</form>
+<br>
+
+<h1>다중 파일 업로드 테스트(반려견)</h1>
+<form action="/uploadFilesWithOriginalFilename" method="post" enctype="multipart/form-data">
+  <input type="file" name="attachments" multiple><br>
+  <button type="submit">업로드</button>
+</form>

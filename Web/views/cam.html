@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>웹캠 테스트</h1>
+    <div class="buttons">
+        <button onclick="startWebcam()">캠 열기</button>
+        <button onclick="stopWebcam()">캠 닫기</button>
+    </div>
+    <video id="webcam-id" autoplay="true">
+
+    </video>
+
+
+
+    <script>
+        const videoEL = document.getElementById("webcam-id");
+
+        const startWebcam = () => {
+            if(navigator.mediaDevices.getUserMedia) {
+                navigator.mediaDevices
+                    .getUserMedia({video:true})
+                    .then(stream => {
+                        videoEL.srcObject = stream;
+                    })
+                    .catch(err => {
+                        console.log("카메라 로딩 실패!");
+                    });
+            }
+        };
+
+        const stopWebcam = () => {
+            const stream = videoEL.srcObject;
+            const tracks = stream.getTracks();
+
+            for(let i = 0; i < tracks.length; i++) {
+                const track = tracks[i]
+                track.stop();
+            }
+
+            videoEL.srcObject = null;
+        }
+    </script>
+</body>
+</html>
