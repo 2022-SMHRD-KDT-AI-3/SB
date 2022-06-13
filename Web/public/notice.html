@@ -5,22 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, 
                             maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
-    <link href="./css/notice.css" rel="stylesheet">
+    <link href="./assets/css/main.css" rel="stylesheet">
+
+    <script type="text/javascript" charset="utf-8" src="./assets/js/jquery.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="./assets/js/bbs_list.js"></script>
+
     <title>Notice</title>
 </head>
 <body>
+    <img class="LOGO" src="./img/Smiley.PNG" alt="">
     <header>
-        <img class="LOGO" src="./img/Smiley.PNG" alt="">
+        <div>
+            <span>공지사항</span>
+        </div>
     </header>
 
 
     <main>
-        <!-- '공지사항' 배너 -->
-        <div>
-            <span>공지사항</span><br>
-        </div>
+     
         <!-- ejs 로 변환해서 공지사항 계속 뜨게-->
-        <table>
+        <!-- <table>
             <tr>
                 <td class="td">1</td>
             </tr>
@@ -33,7 +37,12 @@
             <tr>
                 <td class="td">4</td>
             </tr>
-        </table>
+        </table> -->
+
+        <div class="wrap">
+            <ul id="bbsListArea"></ul>
+        
+        </div>
 
     </main>
 
