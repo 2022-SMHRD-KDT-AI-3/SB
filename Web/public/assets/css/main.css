@@ -7,7 +7,7 @@
 @media ( min-width: 1024px ) {
 }
 
-
+/* 전체구조 */
 html, body{
   height:100%;
 }
@@ -16,12 +16,16 @@ body{
   margin:0;
   padding:0;
 }
+
+/* 메인구조 */
 main{
   left:0;
   bottom:0;
   width:100%;
   margin: 0px 0px 100px 0px;
 }
+
+/* 게시판 목록 */
   ul, ol{ 
     list-style:none;
     padding:0;
@@ -42,6 +46,7 @@ main{
       /* background-color:#333; */
       /* border-bottom:2px solid #cc0000; */
     }
+
     footer{
       position:absolute;
       left:0;
@@ -79,10 +84,12 @@ main{
       }
 
 
+  /* 로고 */
   .LOGO {
     width: auto;
   }
   
+  /*메뉴명 */
   span {
     position:absolute;
     left:0;
@@ -96,9 +103,36 @@ main{
     color: #fb0;
     
   }
-  
+
+  /* 버튼 */
   button {
     background-color: #fb0;
     color: #fff;
   }
 
+  /* 공지사항 상세 */
+  table{
+    margin: 100px 0px 0px 0px;
+    /* border-top: 1px solid #CCC;
+    border-collapse: collapse; */
+
+  }
+  tr, td{
+    border-top: 1px solid #CCC;
+    padding: 10px;
+    border-left: none;
+    /* width:100%; */
+  }
+  
+  #title {
+    font-size: 30px;
+    /* direction: underline; */
+   }
+   #date{
+    font-size: 13px;
+   }
+
+   #writebtn{
+    margin-left: 200px;
+    /* margin: 0px 0px 200px 200px; */
+   }
