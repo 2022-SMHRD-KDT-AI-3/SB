@@ -36,4 +36,56 @@ router.post('/uploadFilesWithOriginalFilename', uploadWithOriginalFilename.array
   res.render('confirmation', { file:null, files:req.files });
 });
 
+router.get("/diaryMain",function(request,response){
+    
+  response.render("diary_main.ejs",{
+      user : request.session.user
+  })
+})
+
+router.post("/Join", function (request, response) {
+  let id = request.body.id;
+  let pw = request.body.pw;
+  let name = request.body.name;
+  let gender = request.body.gender;
+  let nick = request.body.nick;
+
+  let sql = "insert into USER_INFO values(?, ?, ?, ?, ?, now())";
+
+  conn.query(sql, [
+      id, pw, name, gender, nick
+  ], function (err, rows) {
+      if (rows) {
+          response.redirect("http://172.30.1.16:5501/Web/public/login.html");
+      } else {
+          console.log(err);
+      }
+  });
+});
+
+
+router.post("/Login", function (request, response) {
+  let email = request.body.email;
+  let pw = request.body.pw;
+
+  let sql = "select * from USER_INFO where USER_ID = ? and USER_PW = ?";
+
+  conn.query(sql, [
+      USER_ID, USER_PW
+  ], function (err, rows) {
+      console.log(rows.length);
+      if (rows.length > 0) {
+
+          request.session.user = {
+              "id": rows[0].USER_ID,
+              "nick": rows[0].USER_NICK
+            }
+          response.redirect("http://127.0.0.1:3000/diaryMain")
+      } else {
+          response.redirect("http://172.30.1.16:5501/Web/public/login.html")
+          
+      }
+  });
+});
+
 module.exports = router;

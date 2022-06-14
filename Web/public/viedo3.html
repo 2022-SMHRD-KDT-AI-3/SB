@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="post" action="#" ENCTYPE="multipart/form-data">
+        <button type="submit" id="inputfile">Upload input file</button>
+        <input type="text" readonly="readonly" id="inputfile2" name="inputfile2">
+        <input type="file" style="display:none" id="inputfile3" name="IFILE">
+
+    </form>
+    
+
+    <script src="./js/jquery-3.6.0.js"></script>
+
+    <script>
+    $(document).ready(function(){
+        $("#inputfile").click(function(){
+            $("#inputfile3").click();
+            return false;
+        })
+        $("#inputfile").click(function(){
+            $("#inputfile2").val($("inputfile3").val());
+        })
+    })
+
+    </script>
+    
+</body>
+</html>

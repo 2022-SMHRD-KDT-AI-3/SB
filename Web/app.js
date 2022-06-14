@@ -17,12 +17,18 @@ let db_info = {
 let session_info = new session_mysql_save(db_info);
 
 app.use(bodyparser.urlencoded({extended : false}));
+
+// ejs에 static css 적용
+app.use(express.static('public'));
+
 app.use(session({
     secret : "zizi",
     resave : false,
     saveUninitialized : true,
     store : session_info
 }));
+
 app.use(router);
 app.set("view engine", "ejs");
+
 app.listen(3000);
