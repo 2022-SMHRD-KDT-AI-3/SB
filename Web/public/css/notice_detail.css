@@ -1,0 +1,28 @@
+/* .notice_tit */
+main span{
+    font-family: 'Amsterdam';
+}
+
+.notice_tit{
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+    margin-left: 40px;
+}
+
+.notice_date{
+    float: right;
+    margin-right: 50px;
+    color: #8C8C8C;
+}
+
+.notice_content{
+    margin-right: 45px;
+    color: black;
+    margin-left: 45px;
+}
+
+hr{
+    width: 83%;
+}
+

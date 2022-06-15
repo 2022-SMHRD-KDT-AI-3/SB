@@ -6,51 +6,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>회원가입</title>
 
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="javascript" href="assets/js/main.js">
+    <link rel="stylesheet" href="./css/frame_left.css">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+
 </head>
 <body>
     <header>
-        <img class="logo" src="./img/Smiley.PNG" alt="" width="150">
+        <div class="headbox">
+            <!-- <img class="logo" src="./img/Smiley.PNG" alt=""> -->
+            <p id="logo">Smiley</p>
+        </div>
+        <span class="title">회원가입</span><br>
     </header>
 
     <main>
-
         <div class="container">
-                <span>회원가입</span><br>
+            <input type="text" name="id" placeholder="아이디"><button>중복확인</button>
+            <br>
 
-                <input type="text" name="id" placeholder="아이디"><button>중복확인</button>
-                <br>
+            <input type="text" name="nick" placeholder="닉네임"><button>중복확인</button>
+            <br>
 
-                <input type="text" name="nick" placeholder="닉네임"><button>중복확인</button>
-                <br>
+            <input type="password" name="pw" placeholder="비밀번호">
+            <br>
 
-                <input type="password" name="pw" placeholder="비밀번호">
-                <br>
+            <input type="password" name="pwCheck" placeholder="비밀번호확인">
+            <br>
+            <br>
 
-                <input type="password" name="pwCheck" placeholder="비밀번호확인">
-                <br>
-                <br>
+            이름
+            <input type="text" name="name" id="name" placeholder="이름을 입력하세요">
+            <br>
 
-                이름<input type="text" name="name" id="" placeholder="이름을 입력하세요">
-                <br>
+            성별
+            <input type="radio" name="gender" value="man"> 남
+            <input type="radio" name="gender" value="woman"> 여 
+            <br>
 
-                성별
-                <input type="radio" name="gender" id="" value="man"> 남
-                <input type="radio" name="gender" id="" value="woman"> 여 
-                <br>
-
-                <button onclick="alert('가입을 축하합니다.\n반려동물등록페이지로 이동합니다.')">가입하기</button>
-            </div>
+            <button onclick="alert('가입을 축하합니다.\n반려동물등록페이지로 이동합니다.')">가입하기</button>
         </div>
     </main>
     
     <footer>
-        <hr>
-        <a href=""><label >Back.</label></a>
+        <div class="footer">
+            <hr>
+            <a href=""><span class="btnBack">Back.</span></a>
+        </div>
     </footer> 
-
 </body>
 </html>
