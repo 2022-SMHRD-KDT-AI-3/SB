@@ -7,7 +7,8 @@
                             maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
     <script type="text/javascript" charset="utf-8" src="./assets/js/jquery.min.js"></script>
     <script type="text/javascript" charset="utf-8" src="./assets/js/bbs_list.js"></script>
-    <link href="./css/frame.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/frame_left.css">
+    <link rel="stylesheet" href="./css/notification.css">
 
     <title>알림</title>
 </head>
@@ -22,8 +23,8 @@
 
 
     <main>
-     
-        <table>
+     <!-- ejs 바꾸기 -->
+        <table border="solid 1px black">
             <tr>
                 <td width="80%">__의 감정상태에 변화가 있습니다.</td>
                 <td >2시간전</td>
@@ -51,9 +52,11 @@
 
 
     <footer>
-        <hr>
-        <a href=""><label >Back.</label></a>
-    </footer> 
+        <div class="footer">
+            <hr id="bottomline">
+            <a href=""><span class="btnBack">Back.</span></a>
+        </div>
+      </footer> 
 </body>
 
 <script type="text/javacript" charset="utf-8" src="./scripts/jquery-1.10.2.min.js"></script>
