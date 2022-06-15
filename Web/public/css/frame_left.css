@@ -1,0 +1,84 @@
+@font-face {
+    font-family: 'Yeongdo-Rg';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202-2@1.0/Yeongdo-Rg.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Amsterdam';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/naverfont_01@1.0/Amsterdam.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+* { 
+font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+}
+
+ 
+html{
+    height: 100%;
+    width: 100%;
+}
+
+
+#logo{
+    font-family: 'Yeongdo-Rg';
+    color: #C3B9B9;
+    font-size: 25px;
+    text-align: left;
+    margin-left: 10px;
+}
+
+header{
+    text-align: center;  
+}
+
+header span{
+    font-family: 'Amsterdam';
+    font-weight: bold;
+    font-size: 25px;
+    color: #D4F2AC;
+    justify-content: center;    
+}
+
+main{
+    margin-top: 50px;
+}
+
+.box_menu_wrap{
+    text-align: center;
+}
+
+.box_menu{
+    font-family: 'Yeongdo-Rg';
+    color: #5D4C4C;
+    font-size: 11px;
+}
+
+/* .wrap_content{
+    height: 70%;
+} */
+
+.footer{
+    position: absolute;
+    bottom: 0;
+    width: 90%;
+    height: 8%;
+    /* span 태그 가운데정렬 선행조건 */
+    text-align: center;  
+    margin: auto;
+}
+
+/* Back 버튼 가운데정렬 */
+.footer a{
+    font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+    font-size: 10px;
+    text-decoration: none;
+    vertical-align: middle;
+    color: black;
+    /* display: flex; */
+    justify-content: center;    
+}
