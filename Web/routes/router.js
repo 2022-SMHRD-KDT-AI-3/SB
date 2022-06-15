@@ -50,7 +50,8 @@ router.post("/Join", function (request, response) {
   let gender = request.body.gender;
   let nick = request.body.nick;
 
-  let sql = "insert into USER_INFO values(?, ?, ?, ?, ?, now())";
+
+  let sql = "insert into USER_INFO(USER_ID, USER_PW,USER_NAME, USER_GENDER, USER_NICK, JOIN_DATE) values(?, ?, ?, ?, ?, now())";
 
   conn.query(sql, [
       id, pw, name, gender, nick
@@ -87,5 +88,9 @@ router.post("/Login", function (request, response) {
       }
   });
 });
+
+
+
+
 
 module.exports = router;
