@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Roboto:ital,wght@1,100&display=swap');
+
+table{
+    margin: auto;
+    table-layout: auto;
+}
+td{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 300;
+}

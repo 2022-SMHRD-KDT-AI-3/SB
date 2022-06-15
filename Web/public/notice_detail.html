@@ -6,45 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>공지사항 상세페이지</title>
 
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="javascript" href="assets/js/main.js">
+    <link rel="stylesheet" href="./css/frame_left.css">
+    <link rel="stylesheet" href="./css/notice_detail.css">
 
 </head>
 <body>
-    <img class="LOGO" src="./img/Smiley.PNG" alt="">
-    <header>
-        <div>
-            <span>공지사항</span>
-            
-        </div>
+        <header>
+            <div class="headbox">
+                <!-- <img class="logo" src="./img/Smiley.PNG" alt=""> -->
+                <p id="logo">Smiley</p>
+            </div>
+            <span class="title">공지사항</span><br>
+        </header>
+    
+    
+        <!-- DB에서 가져와야 하는 부분!!! ejs 로 바꾸기 -->
+        <main>
+                <span class="notice_tit">서버 점검이 시작됩니다. </span><br>
+                <hr>
+                <span class="notice_date">2022. 06. 14</span>
+                <br><br>
+                <span class="notice_content">서버 점검이 6월 10일 00시부터 06시까지 진행됩니다. </span><br>
+                <span class="notice_content">회원님들의 양해 부탁드립니다.  </span><br>
+        </main>
+    
+        <footer>
+          <div class="footer">
+              <hr id="bottomline">
+              <a href=""><span class="btnBack">Back.</span></a>
+          </div>
+        </footer> 
         
-    </header>
-
-    <a href="./notice_write.html" id="writebtn">글쓰기</a>
-
-    <main>
-        <table>
-            <tr>
-                <td width="100%" colspan="2" id="title">제목</td>
-                <td ></td>
-            </tr>
-
-            <tr>
-                <td colspan="2" height="20" id="date">날짜</td>
-                <td></td>
-            </tr>
-
-            <tr>
-                <td colspan="2" height="400" id="content">내용</td>
-                <td></td>
-            </tr>
-        </table>
-    </main>
-
-    <footer>
-        <hr>
-        <a href=""><label >Back.</label></a>
-    </footer> 
-   
 </body>
 </html>
