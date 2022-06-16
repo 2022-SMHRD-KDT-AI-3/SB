@@ -58,8 +58,10 @@
             <input style="display: block;" type="file" id="input-image">
         </div> -->
         <div class="image-container">
-          <img style="width: 350px;" id="preview-image" src="https://dummyimage.com/500x500/ffffff/000000.png&text=preview+image">
-          <input style="display: block;" type="file" id="input-image">
+          <!-- <img style="width: 350px;" id="preview-image" src="https://dummyimage.com/500x500/ffffff/000000.png&text=preview+image">
+          <input style="display: block;" type="file" id="input-image"> -->
+          <input type="file" id="image" accept="image/*" onchange="setThumbnail(event);"/>
+          <div id="image_container"></div>
       </div>
 
         <button type="submit">일기등록</button>
@@ -72,6 +74,25 @@
           <a href=""><span class="btnBack">Back.</span></a>
       </div>
     </footer> 
+
+
+
+
+    <script>
+      function setThumbnail(event) {
+        var reader = new FileReader();
+
+        reader.onload = function(event) {
+          var img = document.createElement("img");
+          img.setAttribute("src", event.target.result);
+          document.querySelector("div#image_container").appendChild(img);
+        };
+
+        reader.readAsDataURL(event.target.files[0]);
+      }
+    </script>
+
+
 
 </body>
 </html>
