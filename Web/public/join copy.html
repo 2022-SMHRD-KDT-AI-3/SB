@@ -8,27 +8,30 @@
 
     <link rel="stylesheet" href="./css/frame_left.css">
     <link rel="stylesheet" href="assets/css/join.css">
+    <script type="text/javascript" charset="utf-8" src="./assets/js/join.js"></script>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 
 
 </head>
 <body>
-    <header>
-        <img class="logo" src="./img/Smiley.PNG" alt="" width="150">
-        <h2>회원가입</h2>
-        <br>
-        <br>
-        <br>
-        <br>
-    </header>
+  <header>
+    <div class="headbox">
+      <!-- <img class="logo" src="./img/Smiley.PNG" alt=""> -->
+      <p id="logo">Smiley</p>
+    </div> 
+    <span class="title">반려동물 정보 등록</span><br>
+  </header>
+    
+
 
     <main>
-        
-
-        <div class="container">
-            
-            
+      <form action="" name="join">
             <div class="textForm">
-              <input name="loginId" type="text" class="id" placeholder="아이디">
+              <input name="loginId" type="text" value="" class="id" placeholder="아이디">
               </input>
             </div>
             <div class="textForm">
@@ -55,12 +58,13 @@
             <div class="textForm">
               <input name="cellphoneNo" type="number" class="cellphoneNo" placeholder="전화번호">
             </div>
-            <input type="submit" class="btn" value="J O I N"/>
+            <input type="submit" name="submit" onclick="send()" class="btn" value="JOIN"
+            />
           </form>
 
                 <!-- <button onclick="alert('가입을 축하합니다.\n반려동물등록페이지로 이동합니다.')">가입하기</button> -->
             </div>
-
+          </form>
     </main>
     
     <footer>

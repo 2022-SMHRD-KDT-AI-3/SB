@@ -6,17 +6,26 @@
   
   }
 
+  #logo{
+    font-family: 'Yeongdo-Rg';
+    color: #434D36;
+    font-size: 38px;
+    text-shadow: 4px 4px 4px #D4F2AC;
+    text-align: center;
+    margin-top: 20%;
+    margin-left: 10px;
+}
+
   h2{
+    font-family: 'Noto Sans KR', sans-serif;
     position:absolute;
     /* width:100%; */
     margin: 0px 0px 0px 150px;
-    font-family: SegoeUI;
     font-size: 30px;
     font-weight: bold;
     text-align: center;
-    color: blue;
-    
-}
+    color: #D4F2AC; 
+  } 
   
   body {
     background-image:#34495e;
@@ -108,12 +117,29 @@
   }
   
   .btn {
-    position:relative;
+
+    font-family: 'Noto Sans KR', sans-serif;
+    height: 30%;
+    margin: 0 0 0 35px;
+    padding: 11px 137px 15px 137px;
+    opacity: 0.8;
+    border-radius: 7px;
+    font-weight: bold;
+    width: 80%;
+    margin-top: 10px;
+    border-style: none;
+    background-color: #D4F2AC;
+    cursor:pointer;
+    transition: 0.4s;
+}
+    
+    /* position:relative;
     left:40%;
     transform: translateX(-50%);
     margin-bottom: 40px;
     width:80%;
     height:40px;
+    background: #D4F2AC;
     background: linear-gradient(125deg,#81ecec,#6c5ce7,#81ecec);
     background-position: left;
     background-size: 200%;
@@ -122,8 +148,7 @@
     border:none;
     cursor:pointer;
     transition: 0.4s;
-    display:inline;
-  }
+    display:inline; */
   
   .btn:hover {
     background-position: right;
@@ -142,9 +167,10 @@
     }
   
     .radioForm input[type="radio"] + span{
+        border-radius: 7px;
         display:inline-block;
         background:none;
-        border:1px solid #dfdfdf;  
+        border:1px solid #D4F2AC;  
         padding:0px 50px;
         text-align:center;
         height:35px;
@@ -154,6 +180,5 @@
     } 
   
     .radioForm input[type="radio"]:checked + span{
-        background: linear-gradient(125deg,#81ecec,#6c5ce7,#81ecec);
-        color:#fff;
+      background-color: #D4F2AC;
     }
