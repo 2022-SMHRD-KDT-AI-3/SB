@@ -65,9 +65,11 @@ main{
     padding: 11px 19px 13px 20px;
 
 }
+
 input::placeholder {
     font-style: italic;
-  }
+}
+
 button{
     font-family: 'Noto Sans KR', sans-serif;
     height: 30%;
@@ -117,6 +119,7 @@ main a{
     /* display: flex; */
     justify-content: center;    
 }
+
 span{
     font-weight: bold;
 }

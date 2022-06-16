@@ -12,13 +12,10 @@
     font-style: normal;
 }
 
-
- 
 html{
     height: 100%;
     width: 100%;
 }
-
 
 #logo{
     font-family: 'Yeongdo-Rg';
@@ -59,13 +56,13 @@ main{
 } */
 
 .footer{
-    position: absolute;
+    /* position: absolute; */
     bottom: 0;
     width: 90%;
     height: 8%;
     /* span 태그 가운데정렬 선행조건 */
     text-align: center;  
-    margin: auto;
+    margin: 0;
 }
 
 /* Back 버튼 가운데정렬 */
