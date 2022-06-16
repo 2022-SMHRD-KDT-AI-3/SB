@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>일기업로드</title>
 
-    <link rel="stylesheet" href="./css/frame_left.css">
+    <!-- <link rel="stylesheet" href="./css/frame_left.css"> -->
+    <link rel="stylesheet" href="./css/diary_upload.css">
+
 
 
 </head>
@@ -20,14 +22,27 @@
     </header>
 
     <main>
+      <div>
+        <div class="tit">날짜</div>
+        <input type="date" class="inputContent" name="diary_date">
+    </div>
+    <div>
+      <div class="tit">제목</div>
+      <input type="text" class="inputContent" name="diary_title">
+  </div>
+  <div>
+    <div class="tit">감정</div>
+    <input type="text" class="inputContent" name="diary_title">
+</div>
+    <br>
       <div class="txtarea">
-        <textarea name="" id="" cols="30" rows="10"></textarea><br>
+        <textarea name="" id="" cols="55" rows="10" placeholder="일기를 작성해주세요."></textarea><br>
       <!-- <div>
           <input type="file" name="uploadFile" id="uploadFile" multiple>
           <div id="preview"></div>
       </div> -->
 
-        <table border="1">
+        <table>
             <tr>
               <td align="center">
                 <input type="file" name="uploadFile" id="uploadFile" multiple>
@@ -36,7 +51,7 @@
             </tr>
           </table>
 
-        <button>일기 등록</button>
+        <button type="submit">일기등록</button>
       </div>
     </main>
     

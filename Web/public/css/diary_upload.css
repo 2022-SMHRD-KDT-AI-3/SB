@@ -1,0 +1,138 @@
+@font-face {
+    font-family: 'Yeongdo-Rg';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202-2@1.0/Yeongdo-Rg.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Amsterdam';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/naverfont_01@1.0/Amsterdam.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html{
+    height: 100%;
+    width: 100%;
+}
+
+#logo{
+    font-family: 'Yeongdo-Rg';
+    color: #C3B9B9;
+    font-size: 25px;
+    text-align: left;
+    margin-left: 10px;
+}
+
+header{
+    text-align: center;  
+}
+
+header span{
+    font-family: 'Amsterdam';
+    font-weight: bold;
+    font-size: 25px;
+    color: #D4F2AC;
+    justify-content: center;    
+}
+
+main{
+    margin-top: 50px;
+}
+
+
+button{
+    font-family: 'Noto Sans KR', sans-serif;
+    height: 30%;
+    padding: 11px 137px 13px 137px;
+    opacity: 0.8;
+    border-radius: 7px;
+    font-weight: bold;
+    width: 90%;
+    margin-top: 10px;
+    border-style: none;
+    background-color: #D4F2AC;
+}
+
+textarea{
+    font-family: 'Noto Sans KR', sans-serif;
+    resize: none; /* 사용자 임의 변경 불가 */
+    resize: both; /* 사용자 변경이 모두 가능 */
+    resize: horizontal; /* 좌우만 가능 */
+    resize: vertical; /* 상하만 가능 */
+    padding: 12px 95px 13px 13px;
+    opacity: 0.8;
+    border-radius: 7px;
+    width: 60%;
+    background-color: #F3F3F3;
+    border: none;
+    font-size: 12px;
+}
+
+
+.box_menu_wrap{
+    text-align: center;
+}
+
+.box_menu{
+    font-family: 'Yeongdo-Rg';
+    color: #5D4C4C;
+    font-size: 11px;
+}
+
+/* .wrap_content{
+    height: 70%;
+} */
+
+
+.tit{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+    color: #9A9A9A;
+    display: inline-block;
+    border-right : solid 2px #F3F3F3;
+    padding: 10px 15px 10px 15px;
+    margin-right: 10px;
+  }
+
+  .inputContent{
+    padding: 12px 13px 13px 13px;
+    opacity: 0.8;
+    border-radius: 7px;
+    width: 60%;
+    background-color: #F3F3F3;
+    border: none;
+    font-size: 12px;
+  }
+
+  input[type="date" i] {
+    font-family: 'Noto Sans KR', sans-serif;
+    margin: 0;
+    padding: 10px 13px 10px 13px;
+    font-size: 12px;
+    font-weight: lighter;
+  }
+
+
+.footer{
+    /* position: absolute; */
+    bottom: 0;
+    width: 90%;
+    height: 8%;
+    /* span 태그 가운데정렬 선행조건 */
+    text-align: center;  
+    margin: 0;
+}
+
+/* Back 버튼 가운데정렬 */
+.footer a{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 10px;
+    text-decoration: none;
+    vertical-align: middle;
+    color: black;
+    /* display: flex; */
+    justify-content: center;    
+}
+
