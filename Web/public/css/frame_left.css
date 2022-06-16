@@ -56,10 +56,10 @@ main{
 } */
 
 .footer{
-    /* position: absolute; */
+    position: absolute;
     bottom: 0;
     width: 90%;
-    height: 8%;
+    height: 7%;
     /* span 태그 가운데정렬 선행조건 */
     text-align: center;  
     margin: 0;

@@ -8,11 +8,9 @@
 
     <!-- <link rel="stylesheet" href="./css/frame_left.css"> -->
     <link rel="stylesheet" href="./css/diary_upload.css">
-    <script type="text/javascript" charset="utf-8" src="./js/jquery.min.js"></script>
-    <script type="text/javascript" charset="utf-8" src="./js/upload.js"></script>
-
-
-
+    <link rel="stylesheet" href="./css/frame_left.css">
+    
+  
 </head>
 <body>
     <header>
@@ -24,47 +22,39 @@
     </header>
 
     <main>
-      <div>
-        <div class="tit">날짜</div>
-        <input type="date" class="inputContent" name="diary_date">
-    </div>
-    <div>
-      <div class="tit">제목</div>
-      <input type="text" class="inputContent" name="diary_title">
-  </div>
-  <div>
-    <div class="tit">감정</div>
-    <input type="text" class="inputContent" name="diary_title">
-</div>
-    <br>
-      <div class="txtarea">
-        <textarea name="" id="" cols="55" rows="10" placeholder="일기를 작성해주세요."></textarea><br>
-      <!-- <div>
-          <input type="file" name="uploadFile" id="uploadFile" multiple>
-          <div id="preview"></div>
-      </div> -->
+      <div class="wrap">
 
-        <!-- <table>
-            <tr>
-              <td align="center">
-                <input type="file" name="uploadFile" id="uploadFile" multiple>
-                <div id="preview"></div>
-              </td>
-            </tr>
-          </table> -->
+        <div>
+          <div class="tit">날짜</div>
+          <input type="date" class="inputContent" name="diary_date">
+        </div>
 
-        <!-- <div class="image-container">
-            <img style="width: 350px;" id="preview-image" src="./img/upload.png">
-            <input style="display: block;" type="file" id="input-image">
-        </div> -->
-        <div class="image-container">
-          <!-- <img style="width: 350px;" id="preview-image" src="https://dummyimage.com/500x500/ffffff/000000.png&text=preview+image">
-          <input style="display: block;" type="file" id="input-image"> -->
-          <input type="file" id="image" accept="image/*" onchange="setThumbnail(event);"/>
-          <div id="image_container"></div>
-      </div>
+        <div>
+          <div class="tit">제목</div>
+          <input type="text" class="inputContent" name="diary_title">
+        </div>
 
-        <button type="submit">일기등록</button>
+        <div>
+          <div class="tit">감정</div>
+          <input type="text" class="inputContent" name="diary_title">
+        </div>
+
+        <br>
+
+        <div class="txtarea">
+          <textarea name="" id="" cols="55" rows="10" placeholder="일기를 작성해주세요."></textarea><br>
+      
+          <form action="">
+            <input type="file" id="chooseFile" name="chooseFile" class="img-input" required>
+          </form>
+
+          <div class="img">
+          </div>
+
+          <button type="submit">일기등록</button>
+
+        </div>
+
       </div>
     </main>
     
@@ -76,23 +66,6 @@
     </footer> 
 
 
-
-
-    <script>
-      function setThumbnail(event) {
-        var reader = new FileReader();
-
-        reader.onload = function(event) {
-          var img = document.createElement("img");
-          img.setAttribute("src", event.target.result);
-          document.querySelector("div#image_container").appendChild(img);
-        };
-
-        reader.readAsDataURL(event.target.files[0]);
-      }
-    </script>
-
-
-
+<script type="text/javascript" src="./js/diary_upload.js"></script>
 </body>
 </html>
