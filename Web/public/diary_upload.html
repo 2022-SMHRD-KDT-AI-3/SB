@@ -8,6 +8,8 @@
 
     <!-- <link rel="stylesheet" href="./css/frame_left.css"> -->
     <link rel="stylesheet" href="./css/diary_upload.css">
+    <script type="text/javascript" charset="utf-8" src="./js/jquery.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="./js/upload.js"></script>
 
 
 
@@ -42,14 +44,23 @@
           <div id="preview"></div>
       </div> -->
 
-        <table>
+        <!-- <table>
             <tr>
               <td align="center">
                 <input type="file" name="uploadFile" id="uploadFile" multiple>
                 <div id="preview"></div>
               </td>
             </tr>
-          </table>
+          </table> -->
+
+        <!-- <div class="image-container">
+            <img style="width: 350px;" id="preview-image" src="./img/upload.png">
+            <input style="display: block;" type="file" id="input-image">
+        </div> -->
+        <div class="image-container">
+          <img style="width: 350px;" id="preview-image" src="https://dummyimage.com/500x500/ffffff/000000.png&text=preview+image">
+          <input style="display: block;" type="file" id="input-image">
+      </div>
 
         <button type="submit">일기등록</button>
       </div>
