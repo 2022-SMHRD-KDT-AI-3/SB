@@ -6,12 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, 
                             maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
     <script type="text/javascript" charset="utf-8" src="./assets/js/jquery.min.js"></script>
-    <script type="text/javascript" charset="utf-8" src="./assets/js/bbs_list.js"></script>
-    <!-- <link rel="stylesheet" href="./css/frame_left.css"> -->
+   
+    <link rel="stylesheet" href="./css/frame_left.css">
     <link rel="stylesheet" href="./css/notice.css">
-
-
-
 
 
     <title>Notice</title>
@@ -28,9 +25,25 @@
 
 
     <main>
-        <div class="wrap">
-            <ul id="bbsListArea"></ul>
-        </div>
+        <table class="type">
+            <thead>
+            <tr>
+              <th scope="cols"> 제목</th>
+              <th scope="cols">날짜</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td><a href="./notice_detail.html">내용이 들어갑니다.</a></td>
+              <td>2022.06.16</td>
+            </tr>
+            <tr>
+              <th><a href="./notice_detail.html">내용이 들어갑니다.</a></th>
+              <td>2022.06.16</td>
+            </tr>
+<!-- td, th 중 뭐가 더 나은지 몰라서 둘다 써봄! -->
+            </tbody>
+          </table>
     </main>
 
 
