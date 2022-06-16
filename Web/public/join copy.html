@@ -8,9 +8,11 @@
 
     <link rel="stylesheet" href="./css/frame_left.css">
     <link rel="stylesheet" href="./css/join.css">
+    <!-- <link rel="stylesheet" href="./css/animal_join.css"> -->
+
     <script type="text/javascript" charset="utf-8" src="./js/bbs_list.js"></script>
 
-
+    <!-- NotoSans font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
@@ -23,48 +25,96 @@
       <!-- <img class="logo" src="./img/Smiley.PNG" alt=""> -->
       <p id="logo">Smiley</p>
     </div> 
-    <span class="title">반려동물 정보 등록</span><br>
+    <span class="title">회원가입</span><br>
   </header>
-    
-
 
     <main>
-      <form action="" name="join">
-            <div class="textForm">
-              <input name="loginId" type="text" value="" class="id" placeholder="아이디">
-              </input>
-            </div>
-            <div class="textForm">
-              <input name="loginPw" type="password" class="pw" placeholder="비밀번호">
-            </div>
-             <div class="textForm">
-              <input name="loginPwConfirm" type="password" class="pw" placeholder="비밀번호 확인">
-            </div>
-            <div class="textForm">
-              <input name="name" type="password" class="name" placeholder="이름">
-            </div>
-            <!-- <div class="radioForm">
-                <span>남자</span><input name="gender" type="radio" class="gender" checked="checked">
-                <span>여자</span><input name="gender" type="radio" class="gender">
-            </div> -->
+      <div class="wrap">
+        <form action="" method="post" name="join">
 
-            <label class="radioForm">
-                <input type="radio" name="gender" value="남자" checked="checked"><span>남자</span></label>
-            <label class="radioForm">
-                <input type="radio" name="gender" value="여자"><span>여자</span></label>
+          <div>
+            <!-- <div class="tit">아이디</div> -->
+            <input type="text" class="inputContent" name="ID" placeholder="아이디">
+            <label for="floatingInput"></label>
 
-
-
-            <div class="textForm">
-              <input name="cellphoneNo" type="number" class="cellphoneNo" placeholder="전화번호">
+            <!-- 중복확인 버튼 -->
+            <div class="chkBtn">
+              <br>
+              <button id="chkBtn" type="submit">중복확인</button>
+              <br>
             </div>
-            <input type="submit" name="submit" onclick="send()" class="btn" value="JOIN"
-            />
+
+          </div>
+          <br>
+          
+          <div>
+            <!-- <div class="tit">아이디</div> -->
+            <input type="text" class="inputContent" name="Nick" placeholder="닉네임">
+            <label for="floatingInput"></label>
+
+            <!-- 중복확인 버튼 -->
+            <div class="chkBtn">
+              <br>
+              <button id="chkBtn" type="submit">중복확인</button>
+              <br>
+            </div>
+
+          </div>
+          <br>
+
+          <div>
+            <!-- <div class="tit">비밀번호</div> -->
+            <input type="password" class="inputContent" name="Password" placeholder="비밀번호">
+            <label for="floatingInput"></label>
+          </div>
+          <br>
+
+          <div>
+            <!-- <div class="tit">비밀번호 확인</div> -->
+            <input type="password" class="inputContent" name="Password check" placeholder="비밀번호 확인">
+            <label for="floatingInput"></label>
+          </div>
+          <br>
+
+          <div>
+            <div class="tit">이름</div>
+            <input type="text" class="inputContent" name="Name" placeholder="이름">
+            <label for="floatingInput"></label>
+          </div>
+          <br>
+
+          <div>
+            <div class="tit">성별</div>
+            <!-- 누르면 값 넘어가게 해야됨 ㅠㅠ -->
+            <button class="gender">남자</button>
+            <button class="gender">여자</button>
+          </div>
+          <br>
+
+          <div>
+            <div class="tit">연락처</div>
+            <input type="text" class="inputContent" name="animal_name" placeholder="010-0000-0000">
+            <label for="floatingInput"></label>
+          </div>
+          <br>
+
+
+
+              <!-- <button onclick="alert('가입을 축하합니다.\n반려동물등록페이지로 이동합니다.')">가입하기</button> -->
           </form>
-
-                <!-- <button onclick="alert('가입을 축하합니다.\n반려동물등록페이지로 이동합니다.')">가입하기</button> -->
             </div>
-          </form>
+
+        <!-- 가입버튼 -->
+        <div class="joinBtn">
+          <br>
+          <button id="joinBtn" type="submit">회원가입하기</button>
+          <br>
+      </div>
+
+
+      </div>
+
+      
     </main>
     
     <footer>
