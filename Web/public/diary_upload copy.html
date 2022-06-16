@@ -20,32 +20,39 @@
     </header>
 
     <main>
-      <div>
-        <div class="tit">날짜</div>
-        <input type="date" class="inputContent" name="diary_date">
-    </div>
-    <div>
-      <div class="tit">제목</div>
-      <input type="text" class="inputContent" name="diary_title">
-  </div>
-  <div>
-    <div class="tit">감정</div>
-    <input type="text" class="inputContent" name="diary_title">
-</div>
-    <br>
-      <div class="txtarea">
-        <textarea name="" id="" cols="55" rows="10" placeholder="일기를 작성해주세요."></textarea><br>
-    
-        <form action="">
-          <input type="file" id="chooseFile" name="chooseFile" class="img-input" required>
-          <!-- <button type="button" id="btn-upload">Image</button> -->
-          <!-- <button class="submit-btn">사진업로드</button> -->
-        </form>
-        <div class="img">
-          
+      <div class="wrap">
+        
+        <div>
+          <div class="tit">날짜</div>
+          <input type="date" class="inputContent" name="diary_date">
         </div>
 
-        <button type="submit">일기등록</button>
+        <div>
+          <div class="tit">제목</div>
+          <input type="text" class="inputContent" name="diary_title">
+        </div>
+
+        <div>
+          <div class="tit">감정</div>
+          <input type="text" class="inputContent" name="diary_title">
+        </div>
+
+        <br>
+
+        <div class="txtarea">
+          <textarea name="" id="" cols="55" rows="10" placeholder="일기를 작성해주세요."></textarea><br>
+      
+          <form action="">
+            <input type="file" id="chooseFile" name="chooseFile" class="img-input" required>
+          </form>
+
+          <div class="img">
+          </div>
+
+          <button type="submit">일기등록</button>
+
+        </div>
+
       </div>
     </main>
     

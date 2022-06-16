@@ -84,7 +84,9 @@ textarea{
 /* .wrap_content{
     height: 70%;
 } */
-
+.wrap{
+    text-align: center;
+}
 
 .tit{
     font-family: 'Noto Sans KR', sans-serif;
@@ -94,6 +96,7 @@ textarea{
     border-right : solid 2px #F3F3F3;
     padding: 10px 15px 10px 15px;
     margin-right: 10px;
+    justify-content: center;
   }
 
   .inputContent{
@@ -148,7 +151,7 @@ textarea{
     height: 100%;
     object-fit: cover;
 }
-/* 
-#chooseFile{
+
+/* #chooseFile{
     display: none;
 } */
