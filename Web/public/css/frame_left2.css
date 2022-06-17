@@ -21,7 +21,7 @@ html{
     font-family: 'Yeongdo-Rg';
     color: #C3B9B9;
     font-size: 25px;
-    text-align: cener;
+    text-align: left;
     margin-left: 10px;
 }
 
@@ -61,13 +61,23 @@ main{
 }
 
 .footer{
-    position: absolute;
+    transform: translateY(-100%);
+    position: relative;
     bottom: 0;
+    /* width: 90%; */
+    height: 7%;
+    /* span 태그 가운데정렬 선행조건 */
+    text-align: center;  
+    margin: 0;
 }
 
-img#back{
-    margin: 10px;
-    height: 30px; 
-    width: 30px;
-    opacity: 60%;
+/* Back 버튼 가운데정렬 */
+.footer a{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 10px;
+    text-decoration: none;
+    vertical-align: middle;
+    color: black;
+    /* display: flex; */
+    justify-content: center;    
 }
