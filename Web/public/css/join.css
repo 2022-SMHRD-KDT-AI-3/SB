@@ -9,21 +9,36 @@
     padding: 12px 13px 13px 13px;
     opacity: 0.8;
     border-radius: 7px;
-    width: 60%;
+    width: 56%;
     background-color: #F3F3F3;
     border: none;
     font-size: 12px;
     display: inline-block;
-
 }
-  /* 등록하기 버튼 */
-.chkBtn{
-    text-align: center;
-    margin: 0 auto;
+
+.inputContent_pw{
+    padding: 12px 13px 13px 13px;
+    opacity: 0.8;
+    border-radius: 7px;
+    width: 90%;
+    background-color: #F3F3F3;
+    border: none;
+    font-size: 12px;
     display: inline-block;
-
 }
-  
+.inputContent_a{
+    padding: 12px 13px 13px 13px;
+    opacity: 0.8;
+    border-radius: 7px;
+    width: 90%;
+    background-color: #F3F3F3;
+    border: none;
+    font-size: 12px;
+    display: inline-block;
+    width: 60%;
+}
+
+  /* 등록하기 버튼 */
 button#chkBtn{
     font-family: 'Noto Sans KR', sans-serif;
     height: 30%;
@@ -35,6 +50,8 @@ button#chkBtn{
     border-style: none;
     background-color: #D4F2AC;
     margin: 0 auto;
+    display: inline-block;
+    width: 33%;
 }
 .tit{
     font-family: 'Noto Sans KR', sans-serif;
@@ -44,9 +61,10 @@ button#chkBtn{
     border-right : solid 2px #F3F3F3;
     padding: 10px 15px 10px 15px;
     margin-right: 10px;
+    width: 15%;
 }
   
-button.gender{
+button.gender_man{
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 12px;
     font-weight: lighter;
@@ -54,12 +72,21 @@ button.gender{
     opacity: 0.8;
     border-radius: 7px;
     border-style: none;
-    width: 33%;
+    width: 32%;
     padding: 11px 0 11px 0;
-    margin-right: 5px;
+    margin-right: 10px;
 }
-
-
+button.gender_woman{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 12px;
+    font-weight: lighter;
+    /* padding: 12px 13px 13px 13px; */
+    opacity: 0.8;
+    border-radius: 7px;
+    border-style: none;
+    width: 32%;
+    padding: 11px 0 11px 0;
+}
 
 /* 회원가입하기 버튼 */
 .joinBtn{

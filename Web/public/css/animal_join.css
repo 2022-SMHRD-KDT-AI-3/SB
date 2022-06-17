@@ -75,14 +75,12 @@
   border-radius: 7px;
   background-color: #F3F3F3;
   border: none;
-
 }
 
 /* 등록하기 버튼 */
 .enrollBtn{
   text-align: center;
   margin: 0 auto;
-
 }
 
 button#enrollBtn{
@@ -97,7 +95,6 @@ button#enrollBtn{
   border-style: none;
   background-color: #D4F2AC;
   margin: 0 auto;
-
 }
 
 input[type="date" i] {
@@ -139,7 +136,6 @@ button.gender{
   overflow: hidden;
   text-align: center;
   margin: auto;
-
 }
 
 .profile {

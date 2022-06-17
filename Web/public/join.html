@@ -7,6 +7,7 @@
     <title>회원가입</title>
 
     <link rel="stylesheet" href="./css/frame_left.css">
+
     <link rel="stylesheet" href="./css/join.css">
     <!-- <link rel="stylesheet" href="./css/animal_join.css"> -->
 
@@ -34,17 +35,20 @@
 
           <div>
             <!-- <div class="tit">아이디</div> -->
+         
             <input type="text" class="inputContent" name="ID" placeholder="아이디">
             <label for="floatingInput"></label>
 
-            <!-- 중복확인 버튼 -->
-            <div class="chkBtn">
-              <br>
-              <button id="chkBtn" type="submit">중복확인</button>
-              <br>
-            </div>
-
+                    <!-- 중복확인 버튼 -->
+            <button id="chkBtn" type="submit">중복확인</button>
+            <br>
+    
+           
           </div>
+          <!-- <div class="chkBtn"> -->
+            
+          <!-- </div> -->
+
           <br>
           
           <div>
@@ -52,33 +56,34 @@
             <input type="text" class="inputContent" name="Nick" placeholder="닉네임">
             <label for="floatingInput"></label>
 
+            <button id="chkBtn" type="submit">중복확인</button>
+            <br>
+
             <!-- 중복확인 버튼 -->
-            <div class="chkBtn">
-              <br>
-              <button id="chkBtn" type="submit">중복확인</button>
-              <br>
-            </div>
+            <!-- <div class="chkBtn">
+             
+            </div> -->
 
           </div>
           <br>
 
-          <div>
+          <div class="pw">
             <!-- <div class="tit">비밀번호</div> -->
-            <input type="password" class="inputContent" name="Password" placeholder="비밀번호">
+            <input type="password" class="inputContent_pw" name="Password" placeholder="비밀번호">
             <label for="floatingInput"></label>
           </div>
           <br>
 
-          <div>
+          <div class="pw">
             <!-- <div class="tit">비밀번호 확인</div> -->
-            <input type="password" class="inputContent" name="Password check" placeholder="비밀번호 확인">
+            <input type="password" class="inputContent_pw" name="Password check" placeholder="비밀번호 확인">
             <label for="floatingInput"></label>
           </div>
           <br>
 
           <div>
             <div class="tit">이름</div>
-            <input type="text" class="inputContent" name="Name" placeholder="이름">
+            <input type="text" class="inputContent_a" name="Name" placeholder="이름">
             <label for="floatingInput"></label>
           </div>
           <br>
@@ -86,14 +91,14 @@
           <div>
             <div class="tit">성별</div>
             <!-- 누르면 값 넘어가게 해야됨 ㅠㅠ -->
-            <button class="gender">남자</button>
-            <button class="gender">여자</button>
+            <button class="gender_man">남자</button>
+            <button class="gender_woman">여자</button>
           </div>
           <br>
 
           <div>
             <div class="tit">연락처</div>
-            <input type="text" class="inputContent" name="animal_name" placeholder="010-0000-0000">
+            <input type="text" class="inputContent_a" name="Phone" placeholder="010-0000-0000">
             <label for="floatingInput"></label>
           </div>
           <br>
@@ -109,7 +114,7 @@
           <br>
           <button id="joinBtn" type="submit">회원가입하기</button>
           <br>
-      </div>
+        </div>
 
 
       </div>
