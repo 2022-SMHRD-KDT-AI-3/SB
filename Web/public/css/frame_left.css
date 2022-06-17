@@ -58,6 +58,8 @@ main{
     height: auto;
     min-height: 100%;
     padding-bottom: 7%;
+    text-align: center;  
+    margin: auto;
 }
 
 .footer{
