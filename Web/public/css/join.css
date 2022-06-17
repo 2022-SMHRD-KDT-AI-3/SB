@@ -1,127 +1,103 @@
-* {
-    margin: 0px;
-    padding: 0px;
-    text-decoration: none;
-    font-family:sans-serif;
+.wrap{
+    font-family: 'Noto Sans KR', sans-serif;
+    margin-top: 60px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
   
-  }
-
-  #logo{
-    font-family: 'Yeongdo-Rg';
-    color: #434D36;
-    font-size: 38px;
-    text-shadow: 4px 4px 4px #D4F2AC;
-    text-align: center;
-    margin-top: 20%;
-    margin-left: 10px;
+.inputContent{
+    padding: 12px 13px 13px 13px;
+    opacity: 0.8;
+    border-radius: 7px;
+    width: 56%;
+    background-color: #F3F3F3;
+    border: none;
+    font-size: 12px;
+    display: inline-block;
 }
 
-  h2{
-    font-family: 'Noto Sans KR', sans-serif;
-    position:absolute;
-    /* width:100%; */
-    margin: 0px 0px 0px 150px;
-    font-size: 30px;
-    font-weight: bold;
-    text-align: center;
-    color: #D4F2AC; 
-  } 
-  
-  body {
-    background-image:#34495e;
-  }
-  
-  .joinForm {
-    position:absolute;
-    width:400px;
-    height:400px;
-    padding: 30px, 20px;
-    background-color:#FFFFFF;
-    text-align:center;
-    top:40%;
-    left:50%;
-    transform: translate(-50%,-50%);
-    border-radius: 15px;
-  }
-  
-  .joinForm h2 {
-    text-align: center;
-    margin: 30px;
-  }
-  
-  .textForm {
-    border-bottom: 2px solid #adadad;
-    margin: 30px;
-    padding: 10px 10px;
-  }
-  
-  
-  .id {
-    width: 100%;
-    border:none;
-    outline:none;
-    color: #636e72;
-    font-size:16px;
-    height:25px;
-    background: none;
-  }
-  
-  .pw {
-    width: 100%;
-    border:none;
-    outline:none;
-    color: #636e72;
-    font-size:16px;
-    height:25px;
-    background: none;
-  }
-  
-  .name {
-    width: 100%;
-    border:none;
-    outline:none;
-    color: #636e72;
-    font-size:16px;
-    height:25px;
-    background: none;
-  }
-  
-  .email {
-    width: 100%;
-    border:none;
-    outline:none;
-    color: #636e72;
-    font-size:16px;
-    height:25px;
-    background: none;
-  }
-  
-  .nickname {
-    width: 100%;
-    border:none;
-    outline:none;
-    color: #636e72;
-    font-size:16px;
-    height:25px;
-    background: none;
-  }
-  
-  .cellphoneNo {
-    width: 100%;
-    border:none;
-    outline:none;
-    color: #636e72;
-    font-size:16px;
-    height:25px;
-    background: none;
-  }
-  
-  .btn {
+.inputContent_pw{
+    padding: 12px 13px 13px 13px;
+    opacity: 0.8;
+    border-radius: 7px;
+    width: 90%;
+    background-color: #F3F3F3;
+    border: none;
+    font-size: 12px;
+    display: inline-block;
+}
+.inputContent_a{
+    padding: 12px 13px 13px 13px;
+    opacity: 0.8;
+    border-radius: 7px;
+    width: 90%;
+    background-color: #F3F3F3;
+    border: none;
+    font-size: 12px;
+    display: inline-block;
+    width: 60%;
+}
 
+  /* 등록하기 버튼 */
+button#chkBtn{
     font-family: 'Noto Sans KR', sans-serif;
     height: 30%;
-    margin: 0 0 0 35px;
-    padding: 11px 137px 15px 137px;
+    padding: 9px 3px 11px 3px;
+    opacity: 0.8;
+    border-radius: 7px;
+    font-weight: bold;
+    margin-top: 10px;
+    border-style: none;
+    background-color: #D4F2AC;
+    margin: 0 auto;
+    display: inline-block;
+    width: 33%;
+}
+.tit{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+    color: #9A9A9A;
+    display: inline-block;
+    border-right : solid 2px #F3F3F3;
+    padding: 10px 15px 10px 15px;
+    margin-right: 10px;
+    width: 15%;
+}
+  
+button.gender_man{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 12px;
+    font-weight: lighter;
+    /* padding: 12px 13px 13px 13px; */
+    opacity: 0.8;
+    border-radius: 7px;
+    border-style: none;
+    width: 32%;
+    padding: 11px 0 11px 0;
+    margin-right: 10px;
+}
+button.gender_woman{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 12px;
+    font-weight: lighter;
+    /* padding: 12px 13px 13px 13px; */
+    opacity: 0.8;
+    border-radius: 7px;
+    border-style: none;
+    width: 32%;
+    padding: 11px 0 11px 0;
+}
+
+/* 회원가입하기 버튼 */
+.joinBtn{
+    text-align: center;
+    margin: 0 auto;
+}
+  
+button#joinBtn{
+    font-family: 'Noto Sans KR', sans-serif;
+    height: 30%;
+    padding: 12px 13px 13px 13px;
     opacity: 0.8;
     border-radius: 7px;
     font-weight: bold;
@@ -129,56 +105,5 @@
     margin-top: 10px;
     border-style: none;
     background-color: #D4F2AC;
-    cursor:pointer;
-    transition: 0.4s;
+    margin: 0 auto;
 }
-    
-    /* position:relative;
-    left:40%;
-    transform: translateX(-50%);
-    margin-bottom: 40px;
-    width:80%;
-    height:40px;
-    background: #D4F2AC;
-    background: linear-gradient(125deg,#81ecec,#6c5ce7,#81ecec);
-    background-position: left;
-    background-size: 200%;
-    color:white;
-    font-weight: bold;
-    border:none;
-    cursor:pointer;
-    transition: 0.4s;
-    display:inline; */
-  
-  .btn:hover {
-    background-position: right;
-  }
-
- 
-    .radioForm {
-        padding: 15px 30px;
-        color: #636e72;
-        
-    }
-
-    .radioForm input[type="radio"]{
-        display:none;
-       
-    }
-  
-    .radioForm input[type="radio"] + span{
-        border-radius: 7px;
-        display:inline-block;
-        background:none;
-        border:1px solid #D4F2AC;  
-        padding:0px 50px;
-        text-align:center;
-        height:35px;
-        line-height:33px;
-        font-weight:500;
-        cursor:pointer;
-    } 
-  
-    .radioForm input[type="radio"]:checked + span{
-      background-color: #D4F2AC;
-    }
