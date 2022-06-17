@@ -17,9 +17,7 @@ let db_info = {
 let session_info = new session_mysql_save(db_info);
 
 app.use(bodyparser.urlencoded({extended : false}));
-
-// ejs에 static css 적용
-app.use(express.static('public'));
+app.use(express.static('public')); // 정적 파일을 관리하는 폴더를 지정함
 
 app.use(session({
     secret : "zizi",
@@ -30,5 +28,4 @@ app.use(session({
 
 app.use(router);
 app.set("view engine", "ejs");
-
 app.listen(3000);
