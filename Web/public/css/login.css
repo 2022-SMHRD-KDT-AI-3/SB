@@ -49,11 +49,24 @@ main{
     margin-top: 50px;
 }
 
-/* input 가운데 정렬 */
-.content{
+
+#wrap{
+    /* input 가운데 정렬 */
     text-align: center;  
     margin: auto;
+
+    /* footer 하단 고정 */
+    height: auto;
+    min-height: 100%;
+    padding-bottom: 8%;
+    position: relative;
+
 }
+
+#content_wrap{
+    padding-bottom: 8%;
+}
+
 
 .input{
     justify-content: center;    
@@ -63,7 +76,6 @@ main{
     background-color: #F3F3F3;
     border: none;
     padding: 11px 19px 13px 20px;
-
 }
 
 input::placeholder {
@@ -89,7 +101,6 @@ button{
     background-color: #D4F2AC;
 } */
 
-
 main a{
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 11px;
@@ -99,20 +110,19 @@ main a{
 }
 
 .footer{
-    position: absolute;
+    transform: translateY(-100%);
     bottom: 0;
-    width: 90%;
     height: 8%;
+
     /* span 태그 가운데정렬 선행조건 */
     text-align: center;  
-    margin: auto;
+    margin: 0;
 }
 
 /* Back 버튼 가운데정렬 */
 .footer a{
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 12px;
-
     text-decoration: none;
     vertical-align: middle;  
     color: black;
