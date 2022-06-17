@@ -3,11 +3,10 @@ const router = express.Router();
 const conn = require("../config/db.js");
 
 const multer = require("multer"); // multer 모듈 불러오기(파일 업로드)
-const sharp = require("sharp"); // sharp 모듈 불러오기(이미지 리사이징)
 
 var storage = multer.diskStorage({ // 업로드한 파일의 이름을 유지하기 위해서 storage 변수를 생성함
   destination(req, file, cb) {
-    cb(null, "public/Uploads/"); // 파일의 저장 경로
+    cb(null, "upload"); // 파일의 저장 경로
   },
   filename(req, file, cb) {
     cb(null, `${Date.now()}_${file.originalname}`); // 파일의 이름이 중복되는 것을 방지하기 위해서 파일명 앞에 시간을 라벨링함
@@ -15,82 +14,138 @@ var storage = multer.diskStorage({ // 업로드한 파일의 이름을 유지하
 });
 var uploadWithOriginalFilename = multer({storage : storage});
 
-router.get('/', function(req,res){
-  res.render('upload');
-});
-
+// 단일 파일 업로드 라우터
 router.post('/uploadFileWithOriginalFilename', uploadWithOriginalFilename.single('attachment'), function(req,res){ // 5
 
-    console.log(req.file);
+  console.log(req.file);
 
-
-      sharp(req.file.path) // 파일 리사이즈 순서 파일의위치와 이름 파일이 일차적으로 저장되고 썸네일이 붙은 파일로 리사이즈 되서 재저장
-      .resize(250, 250)                   // 리사이즈크기
-      .jpeg({quality : 100})              
-      .toFile("D:/Repo/Project/Smile/Web/public/Uploads/" + req.file.originalname)  
-
-  res.render('confirmation', { file:req.file, files:null });
+  res.render('confirmation', {
+    file: req.file,
+    files: null
+  });
 });
 
+// 다중 파일 업로드 라우터
 router.post('/uploadFilesWithOriginalFilename', uploadWithOriginalFilename.array('attachments'), function(req,res){ // 7
-  res.render('confirmation', { file:null, files:req.files });
-});
-
-router.get("/diaryMain",function(request,response){
-    
-  response.render("diary_main.ejs",{
-      user : request.session.user
-  })
-})
-
-router.post("/join", function (request, response) {
-  let id = request.body.id;
-  let pw = request.body.pw;
-  let name = request.body.name;
-  let gender = request.body.gender;
-  let nick = request.body.nick;
-
-
-  let sql = "insert into USER_INFO(USER_ID, USER_PW,USER_NAME, USER_GENDER, USER_NICK, JOIN_DATE) values(?, ?, ?, ?, ?, now())";
-
-  conn.query(sql, [
-      id, pw, name, gender, nick
-  ], function (err, rows) {
-      if (rows) {
-          response.redirect("http://172.30.1.16:5501/Web/public/login.html");
-      } else {
-          console.log(err);
-      }
+  res.render('confirmation', {
+    file: null,
+    files: req.files
   });
 });
 
-
+// 로그인 라우터
 router.post("/login", function (request, response) {
-  let email = request.body.email;
-  let pw = request.body.pw;
+  let user_id = request.body.user_id;
 
-  let sql = "select * from USER_INFO where USER_ID = ? and USER_PW = ?";
+  let sql = "select * from user where user_id = ?";
+  conn.query(sql, [user_id], function (err, rows) {
 
-  conn.query(sql, [
-      USER_ID, USER_PW
-  ], function (err, rows) {
-      console.log(rows.length);
-      if (rows.length > 0) {
-
-          request.session.user = {
-              "id": rows[0].USER_ID,
-              "nick": rows[0].USER_NICK
-            }
-          response.redirect("http://127.0.0.1:3000/diaryMain")
-      } else {
-          response.redirect("http://172.30.1.16:5501/Web/public/login.html")
-          
+    if (rows.length > 0) {
+      request.session.user = {
+        "user_id": rows[0].user_id,
+        "doggy_name": rows[0].doggy_name,
+        "diary_id": rows[0].diary_id
       }
+
+      response.redirect("http://127.0.0.1:3000/mainDiary");
+    } else {
+      console.log("로그인 실패");
+    }
   });
 });
 
+// 메인 페이지 라우터(ejs 변환)
+router.get("/mainDiary", function (request, response) {
+  let sql = "select * from diary;" + "select * from comment;";
+  conn.query(sql, function(err, rows) {
 
+    response.render("mainDiary.ejs",{
+      user : request.session.user,
+      diary : rows[0],
+      comment : rows[1]
+    }); // 메인 페이지가 랜더링될 때 유저 세션 정보, 전체 일기 정보, 전체 댓글 정보가 다 전달됨(출력은 for문, if문으로)
+  });
+});
 
+// 마이 페이지 라우터(ejs 변환)
+router.get("/myDiary", function (request, response) {
+  let sql = "select * from diary where diary_id = ?;" + "select * from comment;";
+  conn.query(sql, [request.session.user.diary_id], function(err, rows) {
 
+    response.render("myDiary.ejs",{
+      user : request.session.user,
+      diary : rows[0],
+      comment : rows[1]
+    }); // 마이 페이지가 랜더링될 때 유저 세션 정보, 내 일기 정보, 내 일기의 댓글 정보가 다 전달됨
+  });
+});
+
+// 일기 작성 라우터(동영상 포함, 플라스크랑 주고 받아야 함) 1
+router.post("/writeDiary", function (request, response) {
+  let user_id = request.body.user_id;
+
+  let sql = "select * from user where user_id = ?";
+  conn.query(sql, [user_id], function (err, rows) {
+
+    if (rows.length > 0) {
+      request.session.user = {
+        "user_id": rows[0].user_id,
+        "doggy_name": rows[0].doggy_name,
+        "diary_id": rows[0].diary_id
+      }
+
+      response.redirect("http://127.0.0.1:3000/mainDiary");
+    } else {
+      console.log("로그인 실패");
+    }
+  });
+});
+
+// 일기 작성 라우터(동영상 포함, 플라스크랑 주고 받아야 함) 2
+// 단일 파일 업로드 라우터
+// 파일을 올리고 그 파일 경로를 플라스크로 주면 분석하고 결과값을 반환함
+router.post('/writeDiary', uploadWithOriginalFilename.single('attachment'), function (request, response) {
+
+  console.log(request.file);
+
+  response.redirect("http://127.0.0.1:5000/action");
+  response.redirect("http://127.0.0.1:5000/emotion");
+
+});
+
+router.get('/action', uploadWithOriginalFilename.single('attachment'), function (request, response) {
+
+  console.log(request.file);
+
+  // response.redirect("http://127.0.0.1:3000/mainDiary");
+});
+
+router.get('/emotion', uploadWithOriginalFilename.single('attachment'), function (request, response) {
+
+  console.log(request.file);
+
+  // response.redirect("http://127.0.0.1:3000/mainDiary");
+});
+
+// 댓글 작성 라우터
+router.post("/writeComment", function (request, response) {
+  let user_id = request.session.user_id;
+
+  let sql = "insert into comment(diary_id, user_id, content) values(?, ?, ?);";
+  conn.query(sql, [aa, aa, aa], function (err, rows) {
+
+    if (rows.length > 0) {
+      request.session.user = {
+        "user_id": rows[0].user_id,
+        "doggy_name": rows[0].doggy_name,
+        "diary_id": rows[0].diary_id
+      }
+
+      response.redirect("http://127.0.0.1:3000/mainDiary");
+    } else {
+      console.log("로그인 실패");
+    }
+  });
+});
 
 module.exports = router;
