@@ -64,7 +64,7 @@ main{
     transform: translateY(-100%);
     position: relative;
     bottom: 0;
-    width: 90%;
+    /* width: 90%; */
     height: 7%;
     /* span 태그 가운데정렬 선행조건 */
     text-align: center;  

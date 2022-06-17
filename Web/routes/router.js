@@ -43,7 +43,7 @@ router.get("/diaryMain",function(request,response){
   })
 })
 
-router.post("/Join", function (request, response) {
+router.post("/join", function (request, response) {
   let id = request.body.id;
   let pw = request.body.pw;
   let name = request.body.name;
@@ -65,7 +65,7 @@ router.post("/Join", function (request, response) {
 });
 
 
-router.post("/Login", function (request, response) {
+router.post("/login", function (request, response) {
   let email = request.body.email;
   let pw = request.body.pw;
 
