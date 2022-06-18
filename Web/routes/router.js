@@ -48,7 +48,6 @@ router.post("/login", function (request, response) {
         "doggy_name": rows[0].doggy_name,
         "diary_id": rows[0].diary_id
       }
-
       response.redirect("http://127.0.0.1:3000/mainDiary");
     } else {
       console.log("로그인 실패");
@@ -85,6 +84,7 @@ router.get("/myDiary", function (request, response) {
 // 일기 작성 라우터(동영상 포함, 플라스크랑 주고 받아야 함) 1
 router.post("/writeDiary", function (request, response) {
   let user_id = request.body.user_id;
+
 
   let sql = "select * from user where user_id = ?";
   conn.query(sql, [user_id], function (err, rows) {

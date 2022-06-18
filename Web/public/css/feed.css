@@ -25,11 +25,34 @@ article {
   height: auto;
 }
 
+
+.story {
+  height: 117px;
+  border: 1px solid #dbdbdb;
+  border-radius: 3px;
+}
 aside{
   position: relative;
   left:0px;
   right:100px;
 }
+
+.feed_right_container{
+  position: sticky;
+  width: 450px;
+  top:0px;
+  right:100px;
+}
+
+.my_profile{
+  border-radius: 50%;
+  display: flex;
+  height: 95px;
+  margin: 0px;
+  background-color: #fafafa;
+}
+
+
 
 .empty_box {
   height: 26px;
@@ -99,7 +122,6 @@ aside{
 }
 
 
-10
 .more_details img {
   display: flex;
   justify-content: flex-end;
