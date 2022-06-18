@@ -62,14 +62,14 @@ main{
     margin: auto;
 }
 
-.footer{
+/* .footer{
     position: absolute;
     bottom: 0;
-}
+} */
 
 img#back{
-    margin: 10px;
-    height: 30px; 
-    width: 30px;
+    margin: 578px 0px 0px 350px;
+    height: 50px; 
+    width: 50px;
     opacity: 60%;
 }
