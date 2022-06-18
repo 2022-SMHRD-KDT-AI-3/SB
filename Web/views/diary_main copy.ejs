@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="css/diary_main.css">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./img/template/pinterest-icon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="./css/style2.css">
+    <link rel="stylesheet" href="./css/style3.css">
+    <link rel="stylesheet" href="./css/home.css">
+    <!-- 안성민 집가서 수정함... -->
+    <link rel="stylesheet" href="./css/index.css">
+
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+
+    <title>Diary_main</title>
+
+
+</head>
+<body>
+    <header>
+        <div class="headbox">
+            <!-- <img class="logo" src="./img/Smiley.PNG" alt=""> -->
+            <p id="logo">Smiley</p>
+
+            <div class="box_menu_wrap">
+                <span class="box_menu">People's Diaries</span>
+                <span class="box_menu">|</span>
+                <span class="box_menu">My Diary</span>
+        
+
+            </div>
+        </div>
+    </header>
+
+
+        <main class="galeria">
+            <!--  *********************************** CARD ***********************************************-->
+    
+            <% for(let i=0; i<rows.length; i++){%>
+                <form class="card_box" action="http://127.0.0.1:3000/pin" method="post">
+                    <div class="card">
+                        <img src="../uploads/pin_img/<%=rows[i].img_url%>" alt="02 Imagen">
+                        <div class="contenido-hover" name="">
+    
+                            <div class="row-superior">
+                                <h2 class="categoria-card">프로필 <span class="icono-categoria"><img
+                                            src="./img/template/arrow-down-white.png" alt="Opciones"></span></h2>
+                                <div class="container-btn-guardar">
+                                    <a class="btn-guardar" href="../uploads/pin_img/<%=rows[i].img_url%>"
+                                        download="이미지">저장</a>
+    
+                                </div>
+                            </div>
+                            <input style="display: none;" type="text" name="pin_id" value="<%=rows[i].pin_id%>">
+                            <input type="submit" style="background-color:transparent; border: 0cm;" value="">
+                            <div class="row-inferior">
+                                <div class="container-bottom-btns">
+                                    <a href="#" class="a-share-btn">
+                                        <img src="./img/cards-buttons/downarrow.png" alt="share icon">
+                                    </a>
+                                </div>
+                                <div class="container-bottom-btns">
+                                    <a href="#" class="a-share-btn">
+                                        <img src="./img/cards-buttons/onarrow.png" alt="share icon">
+                                    </a>
+                                </div>
+                                <div class="container-bottom-btns">
+                                    <a href="#" class="a-more-btn">
+                                        <img src="./img/cards-buttons/more-icon.png" alt="more icon">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <%}%>
+        </main>
+    
+    
+        <div id="fixed-menu">
+            <ul>
+                <li class="flex">
+                    <a class="flex flex-1-0-0 flex-ai-c flex-jc-c" href="http://127.0.0.1:3000/upload">
+                        <i class="fas fa-plus"></i>
+                    </a>
+                </li>
+                <li class="flex">
+                    <a class="flex flex-1-0-0 flex-ai-c flex-jc-c" href="#">
+                        <i class="fas fa-question"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    
+        <script type="text/javascript">
+            const dots = document.querySelector(".dots");
+            const dropdown = document.querySelector(".dropdown__list")
+            const container = document.querySelector(".container")
+    
+            dots.addEventListener("click", () => {
+                if (dropdown.style.display === "block") {
+                    dropdown.style.display = "none"
+                } else {
+                    dropdown.style.display = "block"
+                }
+            })
+    
+            container.addEventListener("click", () => {
+                if (dropdown.style.display === "block") {
+                    dropdown.style.display = "none"
+                }
+            })
+    
+            function press(f) {
+                if (f.keyCode == 13) {
+                    Select_form.submit();
+                }
+            }
+    
+        </script>
+    
+</body>
+</html>

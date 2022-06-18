@@ -5,6 +5,10 @@ const conn = require("../config/db.js");
 const multer = require("multer"); // multer 모듈 불러오기(파일 업로드)
 const sharp = require("sharp"); // sharp 모듈 불러오기(이미지 리사이징)
 
+
+
+
+
 var storage = multer.diskStorage({ // 업로드한 파일의 이름을 유지하기 위해서 storage 변수를 생성함
   destination(req, file, cb) {
     cb(null, "public/Uploads/"); // 파일의 저장 경로
@@ -36,12 +40,15 @@ router.post('/uploadFilesWithOriginalFilename', uploadWithOriginalFilename.array
   res.render('confirmation', { file:null, files:req.files });
 });
 
-router.get("/diaryMain",function(request,response){
+router.get("/index",function(request,response){
     
-  response.render("diary_main.ejs",{
+  response.render("index.ejs",{
       user : request.session.user
   })
-})
+});
+
+
+
 
 router.post("/join", function (request, response) {
   let id = request.body.id;
