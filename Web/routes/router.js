@@ -14,6 +14,7 @@ var storage = multer.diskStorage({ // 업로드한 파일의 이름을 유지하
 });
 var uploadWithOriginalFilename = multer({storage : storage});
 
+////
 // 단일 파일 업로드 라우터
 router.post('/uploadFileWithOriginalFilename', uploadWithOriginalFilename.single('attachment'), function(req,res){ // 5
 
@@ -32,6 +33,7 @@ router.post('/uploadFilesWithOriginalFilename', uploadWithOriginalFilename.array
     files: req.files
   });
 });
+////
 
 // 로그인 라우터
 router.post("/login", function (request, response) {
@@ -59,7 +61,7 @@ router.get("/mainDiary", function (request, response) {
   let sql = "select * from diary;" + "select * from comment;";
   conn.query(sql, function(err, rows) {
 
-    response.render("mainDiary.ejs",{
+    response.render("diary_main.ejs",{
       user : request.session.user,
       diary : rows[0],
       comment : rows[1]
