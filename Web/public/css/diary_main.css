@@ -69,23 +69,23 @@ header{
 
 
 /* footer 바닥으로 고정 */
-.footer{
+/* .footer{
     position: fixed;
     bottom: 0;
-    width: 100%;
+    width: 100%; */
 
     /* span 태그 가운데정렬 선행조건 */
-    text-align: center;  
-}
+    /* text-align: center;   */
+/* } */
 
 /* Back 버튼 가운데정렬 */
-.footer a{
+/* .footer a{
     text-decoration: none;
     vertical-align: middle;
     color: black;
     display: flex;
     justify-content: center;    
-}
+} */
 
 /* img#back{
 

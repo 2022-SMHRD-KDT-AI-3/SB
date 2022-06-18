@@ -51,9 +51,9 @@ main{
     font-size: 11px;
 }
 
-/* .wrap_content{
+.wrap_content{
     height: 70%;
-} */
+}
 .wrap{
     height: auto;
     min-height: 100%;
@@ -62,10 +62,10 @@ main{
     margin: auto;
 }
 
-/* .footer{
+.footer{
     position: absolute;
     bottom: 0;
-} */
+}
 
 img#back{
     margin: 578px 0px 0px 350px;

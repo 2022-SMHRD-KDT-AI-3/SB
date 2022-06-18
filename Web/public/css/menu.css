@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@800&display=swap');
 
 html {
+    position: fixed;
 
     box-sizing: border-box ;
     --duration: .45s ;
@@ -16,38 +17,42 @@ html *::after {
 
     box-sizing: inherit ;
 
-}
+} 
 
 .footer {
-    margin: 0 ;
-    height: 190vh ;
+    width: 100%;
+    margin: 0;
+    padding: 0%;
+    height: 100%;
     display: flex ;
     overflow: hidden ;
     align-items: center ;
     justify-content: center ; 
     background-color: #f0f1f1 ;
-    font-family: 'Nunito', sans-serif ;
+    font-family: 'Nunito', sans-serif;
 
 }
 
 .menu {
     margin: 0;
-    width: 47em ;
-    display: flex ;
-    height: 150em ;
+    width: 44em ;
+    display: flex ; 
+    height: 140em ;
     user-select: none ;
     position: relative ;
     align-items: center ;
-    padding: 0 1.9em 2.5em ;
+    padding: 0 1.9em 0 2.9em ;
     justify-content: center ;
     background-color: #fefefe ;
     /* border-radius: 1em 1em 4.5em 4.5em ; */
     -webkit-tap-highlight-color: transparent ;
+    
 
 }
 
 @media (max-width: 42.625em) {
   
+    /* 메뉴전체적인크기 */
   .menu {
     font-size: .55em ;
   }
@@ -68,6 +73,7 @@ html *::after {
 
 } */
 
+/* 메뉴 css 적용 */
 .menu__item {
 
     all: unset ;
@@ -84,6 +90,7 @@ html *::after {
     
 }
 
+/* 메뉴 아이콘 */
 .menu__icon {
     
     font-size: 1.05em ;
@@ -108,6 +115,7 @@ html *::after {
 
 }
 
+/* 메뉴 글자 밑줄 */
 .menu__item::after {
 
     left: 0;
@@ -137,9 +145,10 @@ html *::after {
 
 }
 
+/* 메뉴 글자 간격 */
 .menu__item.active {
     
-    flex-grow: 2.7 ;
+    flex-grow: 1.7 ;
     color: var(--color-2) ;
     
 }
