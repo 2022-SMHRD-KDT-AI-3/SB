@@ -23,38 +23,36 @@
 
     <main>
       <div class="wrap">
-        <form action="http://172.30.1.16:5501/Web/public/diary_upload.html" method="post">
+        <form action="http://127.0.0.1:3000/writeDiary" method="post" enctype="multipart/form-data">
 
-          <div>
+          <!-- <div>
             <div class="tit">날짜</div>
             <input type="date" class="inputContent" name="diary_date">
-          </div>
+          </div> -->
   
           <div>
             <div class="tit">제목</div>
             <input type="text" class="inputContent" name="diary_title">
           </div>
   
-          <div>
+          <!-- <div>
             <div class="tit">감정</div>
             <input type="text" class="inputContent" name="diary_emotion">
-          </div>
+          </div> -->
   
           <br>
   
           <div class="txtarea">
             <textarea name="diary_content" id="" cols="55" rows="10" placeholder="일기를 작성해주세요."></textarea><br>
         
-            <form action="">
-              <input type="file" id="chooseFile" name="chooseFile" class="img-input" required>
-            </form>
+            <input type="file" id="chooseFile" name="chooseFile" class="img-input" required>
   
             <div class="img">
             </div>
   
-            <button type="submit">일기등록</button>
           </div>
   
+          <button type="submit" id="submitBtn">일기 등록하기</button>
 
         </form>
       </div>  
@@ -64,12 +62,12 @@
       <div class="footer">
           <!-- <hr>
           <a href=""><span class="btnBack">Back.</span></a> -->
-          <a href="javascript:history.back()"><img id="back" src="./img/back.png"></a>
+          <a href="http://127.0.0.1:3000/mainDiary"><img id="back" src="./img/back.png"></a>
 
       </div>
     </footer> 
 
-
 <script type="text/javascript" src="./js/diary_upload.js"></script>
+
 </body>
 </html>

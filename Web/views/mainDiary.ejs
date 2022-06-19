@@ -7,8 +7,9 @@
     <title>Main</title>
 </head>
 <body>
-  
-
+  <%for (var i = 0; i < diary.length; i++) {%>
+    <%=diary[i].content%><br>
+  <%}%>
 
   <section>
 
@@ -40,7 +41,7 @@
                       <div class="contents">일기 내용</div>
                     </div>
 
-
+                  <form action="">
                     <div class="inputContainer">
                           <div class="type_comment">
                             <input class="inputBox" type="text" placeholder="댓글 달기...">
@@ -49,7 +50,8 @@
                             <button class="buttonBox" type="summit">게시</button>
                           </span>
                     </div>
-
+                  </form>
+                  
                   <!-- 디비에서 가져올 부분 -->
                     <div class="comments1_box">
                       <div class="comments">댓글들~~~
