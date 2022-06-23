@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>모델</title>
+
+    <link rel="stylesheet" href="./css/diary_upload.css">
+    <link rel="stylesheet" href="./css/frame_left.css">
+</head>
+
+<body>
+  <header>
+    <div class="headbox">
+      <p id="logo">Smiley</p>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+      <form action="http://127.0.0.1:5000/analysis" method="post" enctype="multipart/form-data">
+        <div class="txtarea" id="uploadDiv"style="border: 2px solid #D4F2AC; width: 50%;">
+          <input type="file" id="chooseFile" name="chooseFile" class="img-input" required>
+        </div>
+
+        <button type="submit" id="submitBtn">동영상 전송</button>
+      </form>
+    </div> 
+  </main>
+
+
+
+  <script type="text/javascript" src="./js/diary_upload.js"></script>
+</body>
+</html>

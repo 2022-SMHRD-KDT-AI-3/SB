@@ -1,0 +1,78 @@
+@font-face {
+    font-family: 'Yeongdo-Rg';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202-2@1.0/Yeongdo-Rg.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Amsterdam';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/naverfont_01@1.0/Amsterdam.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html{
+    height: 100%;
+    width: 100%;
+}
+
+#logo{
+    font-family: 'Yeongdo-Rg';
+    color: #434D36;
+    font-size: 25px;
+    text-align: center;
+    margin-left: 10px;
+    text-shadow: 4px 4px 4px #D4F2AC;
+
+}
+
+header{
+    text-align: center;  
+}
+
+header span{
+    font-family: 'Amsterdam';
+    font-weight: bold;
+    font-size: 25px;
+    color: #D4F2AC;
+    justify-content: center;    
+}
+
+main{
+    margin-top: 50px;
+    text-align: center !important;
+}
+
+.box_menu_wrap{
+    text-align: center;
+}
+
+.box_menu{
+    font-family: 'Yeongdo-Rg';
+    color: #5D4C4C;
+    font-size: 11px;
+}
+
+.wrap_content{
+    height: 70%;
+}
+.wrap{
+    height: auto;
+    min-height: 100%;
+    padding-bottom: 7%;
+    text-align: center;  
+    margin: auto;
+}
+
+.footer{
+    position: absolute;
+    bottom: 0;
+}
+
+img#back{
+    margin: 578px 0px 0px 350px;
+    height: 50px; 
+    width: 50px;
+    opacity: 60%;
+}

@@ -1,0 +1,124 @@
+@font-face {
+    font-family: 'Yeongdo-Rg';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202-2@1.0/Yeongdo-Rg.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#logo{
+    font-family: 'Yeongdo-Rg';
+    color: #434D36;
+    font-size: 38px !important;
+    text-align: center;
+    margin-left: 10px;
+    text-shadow: 4px 4px 4px #D4F2AC;
+
+}
+
+
+button{
+    font-family: 'Noto Sans KR', sans-serif;
+    height: 30%;
+    padding: 11px 137px 13px 137px;
+    opacity: 0.8;
+    border-radius: 7px;
+    font-weight: bold;
+    width: 90%;
+    margin-top: 10px;
+    border-style: none;
+    background-color: #D4F2AC;
+}
+
+textarea{
+    font-family: 'Noto Sans KR', sans-serif;
+    resize: none; /* 사용자 임의 변경 불가 */
+    resize: both; /* 사용자 변경이 모두 가능 */
+    resize: horizontal; /* 좌우만 가능 */
+    resize: vertical; /* 상하만 가능 */
+    padding: 12px 95px 13px 13px;
+    opacity: 0.8;
+    border-radius: 7px;
+    width: 60%;
+    background-color: #F3F3F3;
+    border: none;
+    font-size: 12px;
+    text-align: center;
+}
+
+#uploadDiv{
+    display: inline;
+}
+
+
+.box_menu_wrap{
+    text-align: center;
+}
+
+.box_menu{
+    font-family: 'Yeongdo-Rg';
+    color: #5D4C4C;
+    font-size: 11px;
+}
+
+/* .wrap_content{
+    height: 70%;
+} */
+.wrap{
+    text-align: center;
+}
+
+.tit{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+    color: #434D36;
+    display: inline-block;
+    padding: 10px 15px 10px 15px;
+    justify-content: center;
+  }
+
+  .inputContent{
+    padding: 12px 13px 13px 13px;
+    opacity: 0.8;
+    border-radius: 7px;
+    width: 60%;
+    background-color: #F3F3F3;
+    border: none;
+    font-size: 12px;
+  }
+
+  input[type="date" i] {
+    font-family: 'Noto Sans KR', sans-serif;
+    margin: 0;
+    padding: 10px 13px 10px 13px;
+    font-size: 12px;
+    font-weight: lighter;
+  }
+
+#image_container{
+    width: 100px;
+    height: 100px;
+    /* overflow: hidden; */
+    margin: 0 auto;
+}
+
+#image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* #chooseFile{
+    display: none;
+} */
+button{
+    font-family: 'Noto Sans KR', sans-serif;
+    height: 30%;
+    padding: 11px 137px 13px 137px;
+    opacity: 0.8;
+    border-radius: 7px;
+    font-weight: bold;
+    width: 80%;
+    margin-top: 10px;
+    border-style: none;
+    background-color: #D4F2AC;
+}

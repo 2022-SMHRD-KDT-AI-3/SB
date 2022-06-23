@@ -1,0 +1,142 @@
+@font-face {
+    font-family: 'Yeongdo-Rg';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202-2@1.0/Yeongdo-Rg.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Amsterdam';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/naverfont_01@1.0/Amsterdam.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+* { 
+font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+} */
+
+ 
+html{
+    height: 100%;
+    width: 100%;
+}
+
+#logo{
+    font-family: 'Yeongdo-Rg';
+    /* font-family: 'Noto Sans KR', sans-serif; */
+    color: #434D36;
+    font-size: 38px;
+    text-shadow: 4px 4px 4px #D4F2AC;
+    text-align: center;
+    margin-top: 40%;
+    margin-left: 10px;
+}
+
+header{
+    text-align: center;  
+}
+
+header span{
+    font-family: 'Amsterdam';
+    font-weight: bold;
+    font-size: 24px;
+    color: #D4F2AC;
+    justify-content: center;    
+}
+
+main{
+    margin-top: 50px;
+}
+
+
+#wrap{
+    /* input 가운데 정렬 */
+    text-align: center;  
+    margin: auto;
+
+    /* footer 하단 고정 */
+    height: auto;
+    min-height: 100%;
+    padding-bottom: 90%;
+    position: relative;
+
+}
+
+#content_wrap{
+    padding-bottom: 8%;
+    
+}
+
+
+.input{
+    justify-content: center;    
+    width: 70%;
+    margin-bottom: 3px;
+    border-radius: 7px;
+    background-color: #F3F3F3;
+    border: none;
+    padding: 11px 19px 13px 20px;
+}
+
+input::placeholder {
+    font-style: italic;
+}
+
+button{
+    font-family: 'Noto Sans KR', sans-serif;
+    height: 30%;
+    padding: 11px 137px 13px 137px;
+    opacity: 0.8;
+    border-radius: 7px;
+    font-weight: bold;
+    width: 80%;
+    margin-top: 10px;
+    border-style: none;
+    background-color: #D4F2AC;
+}
+/* .loginBtn{
+    width: 80%;
+    margin-top: 10px;
+    border-style: none;
+    background-color: #D4F2AC;
+} */
+
+main a{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 11px;
+    text-decoration: none;
+    vertical-align: middle;  
+    color: black;
+}
+
+.footer{
+    transform: translateY(-100%);
+    bottom: 0;
+    height: 8%;
+    
+
+    /* span 태그 가운데정렬 선행조건 */
+    text-align: center;  
+    margin: 0;
+}
+
+/* Back 버튼 가운데정렬 */
+.footer a{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 12px;
+    text-decoration: none;
+    vertical-align: middle;  
+    color: black;
+    /* display: flex; */
+    justify-content: center;    
+    margin-bottom: 0;
+}
+
+span#join{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+color: black;
+
+}
