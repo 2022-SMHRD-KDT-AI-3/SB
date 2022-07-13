@@ -13,7 +13,7 @@
 - 서버환경 : nodeJS
 - 데이터베이스 : Mysql
 
-##E-R Diagram
+## E-R Diagram
 ![image](https://user-images.githubusercontent.com/101998380/178647152-fed2eb12-f9bc-44e9-81fe-15eb092f12b4.png)
 
 
